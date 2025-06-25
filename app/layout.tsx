@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Born Viral - Scale Your Brand Through High-Impact Short-Form Content',
   description: 'We match you with top creators who deliver 75M+ organic views across TikTok & Instagram. Gen Z creators who understand social algorithms and viral success.',
   keywords: 'short-form content, TikTok marketing, Instagram Reels, viral content, brand growth, social media marketing',
+  icons: {
+    icon: process.env.NODE_ENV === 'production' ? '/bornviral/img/bornviral_logo.ico' : '/img/bornviral_logo.ico',
+  },
 }
 
 export default function RootLayout({

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { getImagePath } from '@/lib/utils'
 
 const founders = [
   {
@@ -14,13 +15,13 @@ const founders = [
     name: 'Jake Davidson',
     title: 'Co-Founder',
     description: 'Sophomore @ Babson College, generated $100,000 in a single month for MealSlash.',
-    image: '/img/jake_davidson.jpg',
+    image: 'img/jake_davidson.jpg',
   },
   {
     name: 'Tommy Duquette',
     title: 'Co-Founder',
     description: 'Co-founder of FightCamp (backed by NEA, CAA, Mike Tyson), now a co-founder at Born Viral.',
-    image: '/img/tommy.png',
+    image: 'img/tommy.png',
   },
 ]
 
@@ -59,7 +60,7 @@ export default function AboutFounders() {
               {founder.image ? (
                 <div className="w-20 h-20 relative rounded-full mb-6 mx-auto overflow-hidden">
                   <Image
-                    src={founder.image}
+                    src={getImagePath(founder.image)}
                     alt={founder.name}
                     fill
                     className="object-cover"

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { getImagePath } from '@/lib/utils'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +22,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center py-2">
             <Image
-              src="/img/bornviral_logo.png"
+              src={getImagePath('img/bornviral_logo.png')}
               alt="Born Viral"
               width={160}
               height={60}
