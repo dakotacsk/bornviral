@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
+  basePath: '/bornviral',
+  assetPrefix: '/bornviral',
   images: {
     unoptimized: true,
   },
