@@ -5,25 +5,26 @@ import Image from 'next/image'
 import { useRef } from 'react'
 import Navbar from '@/components/ui/Navbar'
 import Footer from '@/components/ui/Footer'
+import { getImagePath } from '@/lib/utils'
 
 const team = [
   {
     name: 'Royce Myers',
     role: 'Co-Founder & Creative Director',
     bio: 'Junior @ Babson College, co-creator of 100M+ organic views, led Flyopia\'s short-form content to over 100M views.',
-    image: '/img/royce.PNG',
+    image: 'img/royce.PNG',
   },
   {
     name: 'Jake Davidson',
     role: 'Co-Founder & Strategy Lead',
     bio: 'Sophomore @ Babson College, generated $100,000 in a single month for MealSlash.',
-    image: '/img/jake_davidson.jpg',
+    image: 'img/jake_davidson.jpg',
   },
   {
     name: 'Tommy Duquette',
     role: 'Co-Founder & Business Development',
     bio: 'Co-founder of FightCamp (backed by NEA, CAA, Mike Tyson), now bringing his expertise to Born Viral.',
-    image: '/img/tommy.png',
+    image: 'img/tommy.png',
   },
 ]
 
@@ -155,7 +156,7 @@ export default function About() {
                     <div className="w-full h-full rounded-full overflow-hidden bg-white">
                       {member.image ? (
                         <Image
-                          src={member.image}
+                          src={getImagePath(member.image)}
                           alt={member.name}
                           width={192}
                           height={192}
